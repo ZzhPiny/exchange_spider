@@ -17,6 +17,7 @@
   "devDependencies": {
     "async": "^2.6.0",
     "cheerio": "^1.0.0-rc.2",
+    "excel-export": "^0.5.1",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
   }
