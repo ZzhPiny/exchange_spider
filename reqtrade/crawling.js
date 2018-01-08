@@ -49,8 +49,8 @@ var prePublishObj = {
     maintain: "", // 维护人员
     exchange: "", // 交易所
     handlePerson: "", // 经办人员
-    remark: "", // 备注
-}
+    remark: "" // 备注
+};
 
 // 北交所
 var requestBeijingData = callback => request(siteConfig.beijing).then(body => {
@@ -63,11 +63,11 @@ var requestBeijingData = callback => request(siteConfig.beijing).then(body => {
     var materialObjectLink = link.eq(3).attr("href");
     var stockRightsLink = link.eq(0).attr("href");
 
-    console.log("增资扩股：", increasesStockLink)
-    console.log("央企产权：", centralLink)
-    console.log("市属产权：", municipalLink)
-    console.log("实物：", materialObjectLink)
-    console.log("股权：", stockRightsLink)
+    console.log("增资扩股：", increasesStockLink);
+    console.log("央企产权：", centralLink);
+    console.log("市属产权：", municipalLink);
+    console.log("实物：", materialObjectLink);
+    console.log("股权：", stockRightsLink);
     var path = "";
     async.parallel([
         function(callback) {

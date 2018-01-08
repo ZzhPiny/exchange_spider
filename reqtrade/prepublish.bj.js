@@ -4,6 +4,8 @@ const request = require('request-promise')
 
 // 获取央企产权交易信息
 var reqCentralData = path => new Promise((resolve, reject) => request(path).then(body => {
+    var $ = cheerio.load(body);
+    $(".plist_yqygp").find('tr');
     resolve([]);
 }));
 
@@ -14,9 +16,9 @@ var reqMunicipalData = path => new Promise((resolve, reject) => request(path).th
 
 
 module.exports = paths => new Promise((resolve, reject) => {
-    async.paralle([
-        callback => reqCentralData(path.centralLink).then(data => callback(null, data)).catch(err => callback(err)),
-        callback => reqCentralData(path.municipalLink).then(data => callback(null, data)).catch(err => callback(err))
+    async.parallel([
+        callback => reqCentralData(paths.centralPath).then(data => callback(null, data)).catch(err => callback(err)),
+        callback => reqMunicipalData(paths.municipalPath).then(data => callback(null, data)).catch(err => callback(err))
     ], (err, results) => {
         if (err)
             return reject(err);
