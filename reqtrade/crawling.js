@@ -75,6 +75,7 @@ var requestBeijingData = callback => request(siteConfig.beijing).then(body => {
                 centralPath: centralLink,
                 municipalPath: municipalLink
             }).then(results => {
+                console.log(1234567)
                 callback(null, results);
             }).catch(err => {
                 callback(err);
@@ -106,6 +107,7 @@ var requestBeijingData = callback => request(siteConfig.beijing).then(body => {
             console.log(err);
             throw err;
         }
+        console.log(123456789)
         callback(null, {
             prePublish: results[0],
             stockRights: results[1],
@@ -152,6 +154,7 @@ module.exports = () => new Promise((resolve, reject) => {
         requestTianjinData,
         requestChongqingData
     ], (err, results) => {
+        console.log(123456789)
         if (err) {
             reject(err);
             throw err;
@@ -161,7 +164,7 @@ module.exports = () => new Promise((resolve, reject) => {
             stockRights: [].concat(results[0].stockRights, results[1].stockRights, results[2].stockRights, results[3].stockRights),
             increasesStock: [].concat(results[0].increasesStock, results[1].increasesStock, results[2].increasesStock, results[3].increasesStock),
             materialObject: [].concat(results[0].materialObject, results[1].materialObject, results[2].materialObject, results[3].materialObject)
-        }
+        };
         console.log(JSON.stringify(res, null, 4));
         resolve(res);
     });

@@ -2,28 +2,30 @@ const fs = require('fs');
 
 function mkdir(path) {
     return new Promise((resolve, reject) => {
-        fs.open(path, (err, fd) => {
-            if (err && (err.code == 'EEXIST' || err.code == 'EE')) {
-                fs.mkdirSync(path);
-                return null;
+        fs.mkdir(path, err => {
+            if (err && err.code !== 'EEXIST') {
+                console.log(err);
+                return reject(err);
             }
             resolve();
         });
     });
 }
 
-module.exports = (path, date, exchangeName, exchangeType, fileName, body) => {
+module.exports = ({path = 'page', date, exchangeName, exchangeType, fileName, body}) => {
     mkdir(path).then(() => {
-        path += date;
+        path += '/' + date;
         return mkdir(path);
     }).then(() => {
-        path += exchangeName;
+        path += '/' +exchangeName;
         return mkdir(path);
     }).then(() => {
-        path += exchangeType;
+        path += '/' + exchangeType;
         return mkdir(path);
     }).then(() => {
-        path += fileName;
+        path += '/' + fileName;
         fs.writeFileSync(path, body);
+    }).catch(err => {
+        console.log(err);
     });
 };
