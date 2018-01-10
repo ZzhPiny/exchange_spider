@@ -68,35 +68,33 @@ var requestBeijingData = callback => request(siteConfig.beijing).then(body => {
     console.log("市属产权：", municipalLink);
     console.log("实物：", materialObjectLink);
     console.log("股权：", stockRightsLink);
-    var path = "";
     async.parallel([
         function(callback) {
             getBJPrePublish({
                 centralPath: centralLink,
                 municipalPath: municipalLink
             }).then(results => {
-                console.log(1234567)
                 callback(null, results);
             }).catch(err => {
                 callback(err);
             });
         },
         function(callback) {
-            getBJIncreasesStock(path).then(results => {
+            getBJIncreasesStock(increasesStockLink).then(results => {
                 callback(null, results);
             }).catch(err => {
                 callback(err);
             });
         },
         function(callback) {
-            getBJStockRights(path).then(results => {
+            getBJStockRights(stockRightsLink).then(results => {
                 callback(null, results);
             }).catch(err => {
                 callback(err);
             });
         },
         function(callback) {
-            getBJMaterialObject(path).then(results => {
+            getBJMaterialObject(materialObjectLink).then(results => {
                 callback(null, results);
             }).catch(err => {
                 callback(err);
@@ -107,7 +105,6 @@ var requestBeijingData = callback => request(siteConfig.beijing).then(body => {
             console.log(err);
             throw err;
         }
-        console.log(123456789)
         callback(null, {
             prePublish: results[0],
             stockRights: results[1],
@@ -115,10 +112,10 @@ var requestBeijingData = callback => request(siteConfig.beijing).then(body => {
             materialObject: results[3]
         });
     });
-})
+});
 
 // 获取上交所交易数据
-function requestShanghaiData(callback) {
+var requestShanghaiData = callback => {
     callback(null, {
         prePublish: [],
         stockRights: [],
@@ -128,24 +125,24 @@ function requestShanghaiData(callback) {
 }
 
 // 获取天交所交易数据
-function requestTianjinData(callback) {
+var requestTianjinData = callback => {
     callback(null, {
         prePublish: [],
         stockRights: [],
         increasesStock: [],
         materialObject: []
     });
-}
+};
 
 // 获取重交所交易数据
-function requestChongqingData(callback) {
+var requestChongqingData = callback => {
     callback(null, {
         prePublish: [],
         stockRights: [],
         increasesStock: [],
         materialObject: []
     });
-}
+};
 
 module.exports = () => new Promise((resolve, reject) => {
     async.parallel([
@@ -154,7 +151,6 @@ module.exports = () => new Promise((resolve, reject) => {
         requestTianjinData,
         requestChongqingData
     ], (err, results) => {
-        console.log(123456789)
         if (err) {
             reject(err);
             throw err;
@@ -165,7 +161,7 @@ module.exports = () => new Promise((resolve, reject) => {
             increasesStock: [].concat(results[0].increasesStock, results[1].increasesStock, results[2].increasesStock, results[3].increasesStock),
             materialObject: [].concat(results[0].materialObject, results[1].materialObject, results[2].materialObject, results[3].materialObject)
         };
-        console.log(JSON.stringify(res, null, 4));
+        // console.log(JSON.stringify(res, null, 4));
         resolve(res);
     });
 });
