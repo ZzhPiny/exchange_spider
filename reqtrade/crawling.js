@@ -57,10 +57,10 @@ var requestBeijingData = callback => request(siteConfig.beijing).then(body => {
     var $　= cheerio.load(body);
     var link = $("#c1_4").find("a");
 
-    var increasesStockLink = link.eq(0).attr("href");
+    var increasesStockLink = 'http://www.cbex.com.cn/ztym/zzkgb/indexcsmore.shtml'; // link.eq(0).attr("href");
     var centralLink = link.eq(1).attr("href");
     var municipalLink = link.eq(2).attr("href");
-    var materialObjectLink = link.eq(3).attr("href");
+    var materialObjectLink = "http://www.cbex.com.cn/article/xmpd/swxt/"; // link.eq(3).attr("href");
     var stockRightsLink = link.eq(0).attr("href");
 
     console.log("增资扩股：", increasesStockLink);
@@ -68,38 +68,34 @@ var requestBeijingData = callback => request(siteConfig.beijing).then(body => {
     console.log("市属产权：", municipalLink);
     console.log("实物：", materialObjectLink);
     console.log("股权：", stockRightsLink);
+    
     async.parallel([
-        function(callback) {
-            getBJPrePublish({
-                centralPath: centralLink,
-                municipalPath: municipalLink
-            }).then(results => {
-                callback(null, results);
-            }).catch(err => {
-                callback(err);
-            });
-        },
-        function(callback) {
-            getBJIncreasesStock(increasesStockLink).then(results => {
-                callback(null, results);
-            }).catch(err => {
-                callback(err);
-            });
-        },
-        function(callback) {
-            getBJStockRights(stockRightsLink).then(results => {
-                callback(null, results);
-            }).catch(err => {
-                callback(err);
-            });
-        },
-        function(callback) {
-            getBJMaterialObject(materialObjectLink).then(results => {
-                callback(null, results);
-            }).catch(err => {
-                callback(err);
-            });
-        }
+        callback => getBJPrePublish({
+            centralPath: centralLink,
+            municipalPath: municipalLink
+        }).then(results => {
+            callback(null, results);
+        }).catch(err => {
+            callback(err);
+        }),
+        callback => getBJIncreasesStock(increasesStockLink).then(results => {
+            callback(null, results);
+        }).catch(err => {
+            callback(err);
+        }),
+        callback => getBJStockRights({
+            centralPath: centralLink,
+            municipalPath: municipalLink
+        }).then(results => {
+            callback(null, results);
+        }).catch(err => {
+            callback(err);
+        }),
+        callback => getBJMaterialObject(materialObjectLink).then(results => {
+            callback(null, results);
+        }).catch(err => {
+            callback(err);
+        })
     ], (err, results) => {
         if (err) {
             console.log(err);
@@ -115,14 +111,56 @@ var requestBeijingData = callback => request(siteConfig.beijing).then(body => {
 });
 
 // 获取上交所交易数据
-var requestShanghaiData = callback => {
+var requestShanghaiData = callback => request(siteConfig.shanghai).then(body => {
+    var $ = cheerio.load(body);
+    
+    var prePublishPath;
+    var increasesStockPath;
+    var stockRightsPath;
+    var materialObjPath;
+    async.parallel([
+        callback => getSHPrePublish({
+            centralPath: centralLink,
+            municipalPath: municipalLink
+        }).then(results => {
+            callback(null, results);
+        }).catch(err => {
+            callback(err);
+        }),
+        callback => getSHIncreasesStock(increasesStockLink).then(results => {
+            callback(null, results);
+        }).catch(err => {
+            callback(err);
+        }),
+        callback => getSHStockRights(stockRightsLink).then(results => {
+            callback(null, results);
+        }).catch(err => {
+            callback(err);
+        }),
+        callback => getSHMaterialObject(materialObjectLink).then(results => {
+            callback(null, results);
+        }).catch(err => {
+            callback(err);
+        })
+    ], (err, results) => {
+        if (err) {
+            console.log(err);
+            throw err;
+        }
+        callback(null, {
+            prePublish: results[0],
+            stockRights: results[1],
+            increasesStock: results[2],
+            materialObject: results[3]
+        });
+    });
     callback(null, {
         prePublish: [],
         stockRights: [],
         increasesStock: [],
         materialObject: []
     });
-}
+});
 
 // 获取天交所交易数据
 var requestTianjinData = callback => {
@@ -161,7 +199,6 @@ module.exports = () => new Promise((resolve, reject) => {
             increasesStock: [].concat(results[0].increasesStock, results[1].increasesStock, results[2].increasesStock, results[3].increasesStock),
             materialObject: [].concat(results[0].materialObject, results[1].materialObject, results[2].materialObject, results[3].materialObject)
         };
-        // console.log(JSON.stringify(res, null, 4));
         resolve(res);
     });
 });

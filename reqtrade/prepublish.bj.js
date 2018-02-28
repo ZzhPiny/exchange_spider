@@ -76,7 +76,7 @@ var reqCentralData = path => new Promise((resolve, reject) => request(path).then
         var exchangeProject = [];
         exchangeByTransferParty.forEach((item, index) => {
             var project = exchangeProject.find(project => project.parentGroup === item.parentGroup);
-            if (project === -1) {
+            if (!project) {
                 return exchangeProject.push(item);
             }
 
@@ -161,7 +161,7 @@ var reqMunicipalData = path => new Promise((resolve, reject) => request(path).th
         var exchangeProject = [];
         exchangeByTransferParty.forEach((item, index) => {
             var project = exchangeProject.find(project => project.parentGroup === item.parentGroup);
-            if (project === -1) {
+            if (!project) {
                 return exchangeProject.push(item);
             }
 
@@ -206,7 +206,7 @@ function getDataByTrList($trList) {
         var path = tdList[1].children[0].attribs.href;
         var date = tdList[3].children[0].data;
 
-        if (utils.compareDate(new Date(date), new Date(utils.formatDate(new Date('2018-01-01')))) < 0) {
+        if (utils.compareDate(new Date(date), new Date(utils.formatDate(new Date()))) < 0) {
             return;
         }
 
