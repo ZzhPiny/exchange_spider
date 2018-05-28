@@ -1,4 +1,4 @@
-const crawl = require('../reqtrade/crawling');
+const crawl = require('./crawling');
 
 crawl().then(body => {
     console.log(body);

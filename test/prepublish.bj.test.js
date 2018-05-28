@@ -1,7 +1,7 @@
 /**
  * Created by Piny on 2018/2/6.
  */
-const prePublish = require('../reqtrade/prepublish.bj');
+const prePublish = require('./prepublish.bj');
 
 function testPrePublish() {
     prePublish({

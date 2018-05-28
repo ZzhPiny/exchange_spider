@@ -1,11 +1,35 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预披露</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <% for(var i = 0, len = prePublishData.length; i < len; i++ ) {%>
+                <tr>
+                    <td><%= prePublishData[i].id %></td>
+                    <td><%= prePublishData[i].startTime %></td>
+                    <td><%= prePublishData[i].endTime %></td>
+                    <td><%= prePublishData[i].trade %></td>
+                    <td><%= prePublishData[i].transferParty %></td>
+                    <td><%= prePublishData[i].parentGroup %></td>
+                    <td><%= prePublishData[i].type %></td>
+                    <td><%= prePublishData[i].code %></td>
+                    <td><%= prePublishData[i].companyName %></td>
+                    <td><%= prePublishData[i].companyAddress %></td>
+                    <td><%= prePublishData[i].legalPerson %></td>
+                    <td><%= prePublishData[i].setupDate %></td>
+                    <td><%= prePublishData[i].clientName %></td>
+                    <td><%= prePublishData[i].department %></td>
+                    <td><%= prePublishData[i].maintain %></td>
+                    <td><%= prePublishData[i].handlePerson %></td>
+                    <td><%= prePublishData[i].transferStock %></td>
+                    <td><a href="<%= prePublishData[i].pagePath %>" target="_blank"><%= prePublishData[i].pagePath %></a></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
 </html>

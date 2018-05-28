@@ -2,17 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1359b64-790e-40f5-8b94-f57639ce2af3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/increasestock.bj.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/materialobj.bj.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/prepublish.bj.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/stockrights.bj.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/database.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/increasestocks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/materialobj.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/prepublish.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/stocks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/request/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/request/prepublish/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/router/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/maintain.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/users.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/crawling.js" afterPath="$PROJECT_DIR$/request/reqtrade/crawling.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/increasesstock.bj.js" afterPath="$PROJECT_DIR$/request/reqtrade/increasesstock.bj.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/increasesstock.cq.js" afterPath="$PROJECT_DIR$/request/reqtrade/increasesstock.cq.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/increasesstock.sh.js" afterPath="$PROJECT_DIR$/request/reqtrade/increasesstock.sh.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/increasesstock.tj.js" afterPath="$PROJECT_DIR$/request/reqtrade/increasesstock.tj.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/materialobj.bj.js" afterPath="$PROJECT_DIR$/request/reqtrade/materialobj.bj.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/materialobj.cq.js" afterPath="$PROJECT_DIR$/request/reqtrade/materialobj.cq.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/materialobj.sh.js" afterPath="$PROJECT_DIR$/request/reqtrade/materialobj.sh.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/materialobj.tj.js" afterPath="$PROJECT_DIR$/request/reqtrade/materialobj.tj.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/prepublish.bj.js" afterPath="$PROJECT_DIR$/request/reqtrade/prepublish.bj.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/prepublish.cq.js" afterPath="$PROJECT_DIR$/request/reqtrade/prepublish.cq.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/prepublish.sh.js" afterPath="$PROJECT_DIR$/request/reqtrade/prepublish.sh.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/prepublish.tj.js" afterPath="$PROJECT_DIR$/request/reqtrade/prepublish.tj.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/stockrights.bj.js" afterPath="$PROJECT_DIR$/request/reqtrade/stockrights.bj.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/stockrights.cq.js" afterPath="$PROJECT_DIR$/request/reqtrade/stockrights.cq.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/stockrights.sh.js" afterPath="$PROJECT_DIR$/request/reqtrade/stockrights.sh.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/reqtrade/stockrights.tj.js" afterPath="$PROJECT_DIR$/request/reqtrade/stockrights.tj.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/templateLanguages.xml" afterPath="$PROJECT_DIR$/.idea/templateLanguages.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/www" afterPath="$PROJECT_DIR$/bin/www" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/site.config.js" afterPath="$PROJECT_DIR$/config/site.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reqtrade/crawling.js" afterPath="$PROJECT_DIR$/reqtrade/crawling.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reqtrade/increasesstock.bj.js" afterPath="$PROJECT_DIR$/reqtrade/increasesstock.bj.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reqtrade/materialobj.bj.js" afterPath="$PROJECT_DIR$/reqtrade/materialobj.bj.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reqtrade/prepublish.bj.js" afterPath="$PROJECT_DIR$/reqtrade/prepublish.bj.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reqtrade/stockrights.bj.js" afterPath="$PROJECT_DIR$/reqtrade/stockrights.bj.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/increasestock.bj.test.js" afterPath="$PROJECT_DIR$/test/increasestock.bj.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/materialobj.bj.test.js" afterPath="$PROJECT_DIR$/test/materialobj.bj.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/prepublish.bj.test.js" afterPath="$PROJECT_DIR$/test/prepublish.bj.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/stockrights.bj.test.js" afterPath="$PROJECT_DIR$/test/stockrights.bj.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_crawl.js" afterPath="$PROJECT_DIR$/test/test_crawl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/error.ejs" afterPath="$PROJECT_DIR$/views/error.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="$PROJECT_DIR$/views/index.ejs" />
     </list>
     <ignored path="exchange_spider.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,41 +67,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="crawling.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reqtrade/crawling.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/request/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="72" />
+            <state relative-caret-position="3078">
+              <caret line="198" column="39" selection-start-line="198" selection-start-column="39" selection-end-line="198" selection-end-column="39" />
               <folding>
-                <element signature="e#1288#1715#0" expanded="false" />
-                <element signature="e#3374#3438#0" expanded="false" />
-                <element signature="e#3462#3625#0" expanded="false" />
-                <element signature="e#3734#5117#0" expanded="false" />
-                <element signature="e#4721#4785#0" expanded="false" />
-                <element signature="e#4809#4972#0" expanded="false" />
-                <element signature="e#5171#5307#0" expanded="false" />
-                <element signature="e#5362#5498#0" expanded="false" />
-                <element signature="e#5557#6412#0" expanded="false" />
+                <element signature="e#0#39#0" expanded="false" />
+                <element signature="e#879#1053#0" expanded="false" />
+                <element signature="e#3860#4117#0" expanded="false" />
+                <element signature="e#4207#4324#0" expanded="false" />
+                <element signature="e#5256#5507#0" expanded="false" />
+                <element signature="e#5451#5501#0" expanded="false" />
+                <element signature="e#5626#6071#0" expanded="false" />
+                <element signature="e#9049#9388#0" expanded="false" />
+                <element signature="e#9609#10103#0" expanded="false" />
+                <element signature="e#10182#10307#0" expanded="false" />
+                <element signature="e#10348#10412#0" expanded="false" />
+                <element signature="e#10449#10513#0" expanded="false" />
+                <element signature="e#10536#10797#0" expanded="false" />
+                <element signature="e#10817#10830#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="materialobj.bj.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reqtrade/materialobj.bj.js">
+      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1957">
-              <caret line="103" column="58" selection-start-line="103" selection-start-column="58" selection-end-line="103" selection-end-column="58" />
+            <state relative-caret-position="513">
+              <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stockrights.bj.test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/stockrights.bj.test.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="16" column="9" selection-start-line="3" selection-start-column="0" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="220">
+              <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -75,23 +114,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stockrights.bj.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reqtrade/stockrights.bj.js">
+      <file leaf-file-name="stocks.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/stocks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2432">
-              <caret line="128" column="33" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
+            <state relative-caret-position="19">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#39#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sheet.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/excel-export/sheet.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1349">
+              <caret line="71" column="28" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prepublish.bj.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/reqtrade/prepublish.bj.js">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="95">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prepublish.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/prepublish.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
               <folding>
-                <element signature="e#5068#8495#0" expanded="false" />
+                <element signature="e#0#39#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -103,6 +174,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -112,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/config/contants.js" />
         <option value="$PROJECT_DIR$/utils/savepage.js" />
         <option value="$PROJECT_DIR$/utils/utils.js" />
@@ -129,7 +200,6 @@
         <option value="$PROJECT_DIR$/reqtrade/stockrights.cq.js" />
         <option value="$PROJECT_DIR$/reqtrade/stockrights.sh.js" />
         <option value="$PROJECT_DIR$/reqtrade/stockrights.tj.js" />
-        <option value="$PROJECT_DIR$/config/site.config.js" />
         <option value="$PROJECT_DIR$/test/increasestock.bj.test.js" />
         <option value="$PROJECT_DIR$/reqtrade/increasesstock.bj.js" />
         <option value="$PROJECT_DIR$/test/stockrights.bj.test.js" />
@@ -139,6 +209,31 @@
         <option value="$PROJECT_DIR$/reqtrade/stockrights.bj.js" />
         <option value="$PROJECT_DIR$/reqtrade/materialobj.bj.js" />
         <option value="$PROJECT_DIR$/reqtrade/prepublish.bj.js" />
+        <option value="$PROJECT_DIR$/test/schedule.js" />
+        <option value="$PROJECT_DIR$/request/reqtrade/crawling.js" />
+        <option value="$PROJECT_DIR$/request/prepublish/index.js" />
+        <option value="$PROJECT_DIR$/config/site.config.js" />
+        <option value="$PROJECT_DIR$/dao/savedata.js" />
+        <option value="$PROJECT_DIR$/bin/www" />
+        <option value="$PROJECT_DIR$/dao/database.js" />
+        <option value="$PROJECT_DIR$/config/database.config.js" />
+        <option value="$PROJECT_DIR$/views/error.ejs" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/models/materialobj.js" />
+        <option value="$PROJECT_DIR$/models/increasestocks.js" />
+        <option value="$PROJECT_DIR$/models/stocks.js" />
+        <option value="$PROJECT_DIR$/models/index.js" />
+        <option value="$PROJECT_DIR$/views/index.ejs.html" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/utils/maintain.js" />
+        <option value="$PROJECT_DIR$/models/prepublish.js" />
+        <option value="$PROJECT_DIR$/request/index.js" />
+        <option value="$PROJECT_DIR$/result.json" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/node_modules/excel-export/sheet.js" />
+        <option value="$PROJECT_DIR$/config/styles.xml" />
+        <option value="$PROJECT_DIR$/node_modules/excel-export/index.js" />
+        <option value="$PROJECT_DIR$/router/index.js" />
       </list>
     </option>
   </component>
@@ -208,7 +303,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -222,7 +317,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="reqtrade" />
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exchange_spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exchange_spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="router" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exchange_spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exchange_spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -242,23 +365,29 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/workspace_js/mlpltf-2.0-client" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v8.9.0/bin/node" />
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v8.9.0/bin/node" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/request" />
+    </key>
   </component>
   <component name="RunManager" selected="Node.js.prepublish.bj.test.js">
-    <configuration default="false" name="increasesstock.bj.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="increasesstock.bj.js" working-dir="$PROJECT_DIR$/reqtrade">
+    <configuration default="false" name="increasesstock.bj.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/request/reqtrade/increasesstock.bj.js" working-dir="$PROJECT_DIR$/request/reqtrade">
       <method />
     </configuration>
     <configuration default="false" name="increasestock.bj.test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="increasestock.bj.test.js" working-dir="$PROJECT_DIR$/test">
@@ -363,30 +492,34 @@
       <workItem from="1517281613843" duration="1774000" />
       <workItem from="1517666892957" duration="29154000" />
       <workItem from="1518526822487" duration="132000" />
-      <workItem from="1518788320409" duration="564000" />
+      <workItem from="1518788320409" duration="6119000" />
+      <workItem from="1519914907552" duration="18094000" />
+      <workItem from="1520249253944" duration="52832000" />
+      <workItem from="1521512770825" duration="6925000" />
+      <workItem from="1524561354514" duration="472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72286000" />
+    <option name="totallyTimeSpent" value="156164000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="809" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="809" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.44909343" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.44367176" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962447" sideWeight="0.5024665" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.55090654" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35911602" sideWeight="0.50528544" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.55632824" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35843793" sideWeight="0.49753347" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3588317" sideWeight="0.4947146" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5146036" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27297297" sideWeight="0.49753347" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27196652" sideWeight="0.49753347" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -406,240 +539,33 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/reqtrade/stockrights.tj.js">
+    <entry file="file://$PROJECT_DIR$/request/reqtrade/prepublish.tj.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/crawling.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="52" selection-end-column="2" />
-          <folding>
-            <element signature="e#1288#1715#0" expanded="false" />
-            <element signature="e#3374#3438#0" expanded="false" />
-            <element signature="e#3462#3625#0" expanded="false" />
-            <element signature="e#3734#5117#0" expanded="false" />
-            <element signature="e#4721#4785#0" expanded="false" />
-            <element signature="e#4809#4972#0" expanded="false" />
-            <element signature="e#5171#5307#0" expanded="false" />
-            <element signature="e#5362#5498#0" expanded="false" />
-            <element signature="e#5557#6412#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/increasesstock.bj.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/materialobj.bj.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/stockrights.bj.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/prepublish.bj.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/site.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/crawling.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1577">
-          <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
-          <folding>
-            <element signature="e#1288#1715#0" expanded="false" />
-            <element signature="e#3374#3438#0" expanded="false" />
-            <element signature="e#3462#3625#0" expanded="false" />
-            <element signature="e#3734#5117#0" expanded="false" />
-            <element signature="e#4721#4785#0" expanded="false" />
-            <element signature="e#4809#4972#0" expanded="false" />
-            <element signature="e#5171#5307#0" expanded="false" />
-            <element signature="e#5362#5498#0" expanded="false" />
-            <element signature="e#5557#6412#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/materialobj.cq.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/increasesstock.bj.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/materialobj.bj.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/stockrights.bj.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/prepublish.bj.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/savepage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/increasesstock.cq.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/increasesstock.sh.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/contants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/2017-12-26/北交所/预披露/undefined" />
-    <entry file="file://$PROJECT_DIR$/page/2017-12-26/北交所/预披露/北京长峰宾馆有限责任公司100%股权.html" />
-    <entry file="file://$PROJECT_DIR$/utils/savepage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/request-promise-core/lib/errors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/materialobj.sh.js">
+    <entry file="file://$PROJECT_DIR$/request/reqtrade/stockrights.cq.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/materialobj.tj.js">
+    <entry file="file://$PROJECT_DIR$/request/reqtrade/increasesstock.sh.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/prepublish.cq.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/prepublish.sh.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/prepublish.tj.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/stockrights.cq.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/increasesstock.sh.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/increasesstock.tj.js">
+    <entry file="file://$PROJECT_DIR$/request/reqtrade/increasesstock.tj.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
@@ -653,38 +579,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/stockrights.sh.js">
+    <entry file="file://$PROJECT_DIR$/request/reqtrade/stockrights.sh.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/materialobj.cq.js">
+    <entry file="file://$PROJECT_DIR$/request/reqtrade/materialobj.cq.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/site.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/stockrights.tj.js">
+    <entry file="file://$PROJECT_DIR$/request/reqtrade/stockrights.tj.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -699,14 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="167" column="14" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -717,35 +621,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/increasesstock.cq.js">
+    <entry file="file://$PROJECT_DIR$/request/reqtrade/increasesstock.cq.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/increasesstock.bj.js">
+    <entry file="file://$PROJECT_DIR$/request/reqtrade/increasesstock.bj.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="536">
           <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/crawling.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="72" />
-          <folding>
-            <element signature="e#1288#1715#0" expanded="false" />
-            <element signature="e#3374#3438#0" expanded="false" />
-            <element signature="e#3462#3625#0" expanded="false" />
-            <element signature="e#3734#5117#0" expanded="false" />
-            <element signature="e#4721#4785#0" expanded="false" />
-            <element signature="e#4809#4972#0" expanded="false" />
-            <element signature="e#5171#5307#0" expanded="false" />
-            <element signature="e#5362#5498#0" expanded="false" />
-            <element signature="e#5557#6412#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -756,28 +642,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/increasestock.bj.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/stockrights.bj.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="16" column="9" selection-start-line="3" selection-start-column="0" selection-end-line="16" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/materialobj.bj.js">
+    <entry file="file://$PROJECT_DIR$/request/reqtrade/materialobj.bj.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1957">
           <caret line="103" column="58" selection-start-line="103" selection-start-column="58" selection-end-line="103" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,20 +663,251 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/stockrights.bj.js">
+    <entry file="file://$PROJECT_DIR$/page/2018-01-02/北交所/预披露/深圳市中软创新信息系统有限公司72.5%股权.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/schedule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request/prepublish/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/increasestock.bj.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request/reqtrade/stockrights.bj.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2432">
           <caret line="128" column="33" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/savedata.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/debug/debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="87" column="38" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/database.js" />
+    <entry file="file://$PROJECT_DIR$/config/database.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/error.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/increasestocks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.ejs.html" />
+    <entry file="file://$PROJECT_DIR$/models/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/materialobj.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/maintain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/excel-export/test/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/excel-export/example/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/site.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request/reqtrade/crawling.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="52" column="2" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request/reqtrade/prepublish.bj.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11347">
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3078">
+          <caret line="198" column="39" selection-start-line="198" selection-start-column="39" selection-end-line="198" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+            <element signature="e#879#1053#0" expanded="false" />
+            <element signature="e#3860#4117#0" expanded="false" />
+            <element signature="e#4207#4324#0" expanded="false" />
+            <element signature="e#5256#5507#0" expanded="false" />
+            <element signature="e#5451#5501#0" expanded="false" />
+            <element signature="e#5626#6071#0" expanded="false" />
+            <element signature="e#9049#9388#0" expanded="false" />
+            <element signature="e#9609#10103#0" expanded="false" />
+            <element signature="e#10182#10307#0" expanded="false" />
+            <element signature="e#10348#10412#0" expanded="false" />
+            <element signature="e#10449#10513#0" expanded="false" />
+            <element signature="e#10536#10797#0" expanded="false" />
+            <element signature="e#10817#10830#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reqtrade/prepublish.bj.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/excel-export/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
           <folding>
-            <element signature="e#5068#8495#0" expanded="false" />
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/stocks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/excel-export/sheet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1349">
+          <caret line="71" column="28" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/prepublish.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>

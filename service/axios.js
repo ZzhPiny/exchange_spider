@@ -12,7 +12,10 @@ class Http {
             return config;
         });
         this.http.interceptors.response.use((response) => {
-            return cheerio.load(response);
+            return {
+                $: cheerio.load(response.data),
+                page: response.data,
+            }
         });
     }
 }

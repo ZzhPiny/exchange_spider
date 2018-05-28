@@ -2,7 +2,6 @@
 <project version="4">
   <component name="TemplateDataLanguageMappings">
     <file url="file://$PROJECT_DIR$/app.js" dialect="ECMAScript 6" />
-    <file url="file://$PROJECT_DIR$/reqtrade" dialect="ECMAScript 6" />
-    <file url="file://$PROJECT_DIR$/routes" dialect="ECMAScript 6" />
+    <file url="file://$PROJECT_DIR$/request/reqtrade" dialect="ECMAScript 6" />
   </component>
 </project>

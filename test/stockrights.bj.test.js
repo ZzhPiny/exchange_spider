@@ -1,7 +1,7 @@
 /**
  * Created by Piny on 2018/2/5.
  */
-const increaseStock = require('../reqtrade/stockrights.bj');
+const increaseStock = require('./stockrights.bj');
 
 function testIncreasesStock() {
     increaseStock({
