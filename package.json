@@ -10,7 +10,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "src/**/*.js": [
+    "{exchange, service}/**/*.js": [
       "prettier --tab-width 4 --single-quote --trailing-comma all --arrow-parens always --write",
       "git add"
     ]

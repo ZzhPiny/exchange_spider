@@ -6,7 +6,7 @@ const { beijing: $http } = require('../service/index');
 const models = require('../models');
 const Exchange = require('./exchange');
 
-class BeijingExchange extends Exchange {
+class ChongqingExchange extends Exchange {
     constructor() {
         super();
     }
@@ -18,10 +18,10 @@ class BeijingExchange extends Exchange {
         const noExistData = await this.filterExistData(exchangeData);
         // 为数据设置维护人员、部门
         const dataMaintainList = this.setMaintain(noExistData);
-        // 保存数据
-        await this.saveData(noExistData);
-        // 保存页面
-        this.savePage(noExistData);
+        // // 保存数据
+        // this.saveData(noExistData);
+        // // 保存页面
+        // this.savePages(noExistData);
     }
 
     async fetchStocksData() {}
@@ -47,10 +47,6 @@ class BeijingExchange extends Exchange {
             return data.filter((item) => item !== void 0);
         });
     }
-
-    saveData(data) {
-        return Promise.resolve('save data');
-    }
 }
 
-module.exports = new BeijingExchange();
+module.exports = new ChongqingExchange();
