@@ -17,6 +17,7 @@ class ScheduleTask {
             // this.requestTianjinData();
             // this.requestShanghaiData();
             // this.requestChongqingData();
+            // 监听是否有新增数据，若存在新增数据发送短信邮件或者公众号推送
         });
         return this;
     }

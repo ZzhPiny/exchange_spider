@@ -29,24 +29,6 @@ class ShanghaiExchange extends Exchange {
     async fetchIncreaseStocksData() {}
 
     async fetchMaterialObjData() {}
-
-    filterExistData(dataList) {
-        const promiseList = dataList.map((item) => {
-            return models.PrePublish.findOne({
-                where: {
-                    code: item.code,
-                },
-            }).then((result) => {
-                if (!!result) {
-                    return void 0;
-                }
-                return item;
-            });
-        });
-        return Promise.all(promiseList).then((data) => {
-            return data.filter((item) => item !== void 0);
-        });
-    }
 }
 
 module.exports = new ShanghaiExchange();

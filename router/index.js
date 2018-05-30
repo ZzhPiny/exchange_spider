@@ -6,7 +6,7 @@ const router = express.Router();
 const path = require('path');
 const nodeExcel = require('excel-export');
 const models = require('../models');
-const utils = require('../utils/utils');
+const utils = require('../utils');
 const fs = require('fs');
 
 function tounicode(data)

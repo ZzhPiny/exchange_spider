@@ -3,7 +3,6 @@
  * 2018.05.26
  */
 const { beijing: $http } = require('../service/index');
-const models = require('../models');
 const Exchange = require('./exchange');
 
 class TianjinExchange extends Exchange {
@@ -29,24 +28,6 @@ class TianjinExchange extends Exchange {
     async fetchIncreaseStocksData() {}
 
     async fetchMaterialObjData() {}
-
-    filterExistData(dataList) {
-        const promiseList = dataList.map((item) => {
-            return models.PrePublish.findOne({
-                where: {
-                    code: item.code,
-                },
-            }).then((result) => {
-                if (!!result) {
-                    return void 0;
-                }
-                return item;
-            });
-        });
-        return Promise.all(promiseList).then((data) => {
-            return data.filter((item) => item !== void 0);
-        });
-    }
 }
 
 module.exports = new TianjinExchange();

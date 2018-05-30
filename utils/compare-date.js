@@ -7,7 +7,7 @@
  * @param {[ dateB ]} 第二个日期
  * return -1 / 0 / 1
  */
-exports.compareDate = (dateA, dateB) => {
+module.exports = (dateA, dateB) => {
     console.log(dateA.toString());
     console.log(dateB.toString());
     if (dateA.toString() === 'Invalid Date')
@@ -21,12 +21,3 @@ exports.compareDate = (dateA, dateB) => {
 
     return 1;
 };
-
-exports.formatDate = date => {
-    var yy = date.getFullYear();
-    var mm = date.getMonth() + 1;
-    var dd = date.getDate();
-
-    return yy + '-' + (mm < 10 ? '0' + mm : mm ) + '-' + (dd < 10 ? '0' + dd : dd);
-}
-

@@ -3,7 +3,6 @@ const Http = require('./axios');
 class Beijing extends Http {
     constructor() {
         super();
-        // console.log(this);
         this.url = {
             center: 'http://www.cbex.com.cn/article/xmpd/gzgpbj/index.shtml?protype=yqgp&categoryName=yqygp',
             city: 'http://www.cbex.com.cn/article/xmpd/gzgp/index_ShiShu.shtml?protype=ssgp&categoryName=ssygp',
@@ -13,6 +12,9 @@ class Beijing extends Http {
     async getCurrentDayList(params) {
         const { $: $centerList } = await this.http.get(this.url.center);
         const total = this._getTotal($centerList('.page_yqgp').eq(0));
+        if (!total) {
+            return [];
+        }
         const { $: $centerTotalList } = await this.http.get(this.url.center, {
             curPage: 1,
             numPerPage: total,
@@ -43,7 +45,7 @@ class Beijing extends Http {
      */
     _getTotal($div) {
         const numReg = /\d+/;
-        const total = numReg.exec($div.text())[0];
+        const total = numReg.exec($div.text())[0] || 0;
 
         return total
     }
@@ -81,10 +83,10 @@ class Beijing extends Http {
         const information = {};
         const commonInfo = this._getCommonInfo($('.xinxi').find('tr'));
         const exchangeInfo = this._getExchangeInfo($('.qingk').find('tr'));
-        console.log(exchangeInfo);
         Object.assign(information, commonInfo, exchangeInfo, {
             exchange: '北交所',
         });
+        // console.log(information);
         return information;
     }
 
