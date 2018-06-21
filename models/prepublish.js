@@ -2,7 +2,7 @@
  * Created by Piny on 2018/3/6.
  */
 module.exports = (sequelize, DataTypes) => {
-    var PrePublish = sequelize.define('PrePublish', {
+    const PrePublish = sequelize.define('PrePublish', {
         id: { // 自增索引id
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -16,21 +16,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(14),
             field: 'end_time'
         },
-        projectName: { // 项目名称
+        exchange: { // 交易所
             type: DataTypes.STRING,
-            field: 'project_name'
-        },
-        trade: { // 所属行业
-            type: DataTypes.STRING,
-            field: 'trade'
-        },
-        transferParty: { // 转让方
-            type: DataTypes.STRING,
-            field: 'transfer_party'
-        },
-        parentGroup: { // 隶属集团
-            type: DataTypes.STRING,
-            field: 'parent_group'
+            field: 'exchange'
         },
         type: { // 项目类型
             type: DataTypes.STRING,
@@ -40,25 +28,33 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             field: 'code'
         },
-        exchange: { // 交易所
+        projectName: { // 项目名称
             type: DataTypes.STRING,
-            field: 'exchange'
+            field: 'project_name'
         },
-        companyName: {  // 项目涉及公司名称
+        subProjectName: { // 子项目
             type: DataTypes.STRING,
-            field: 'company_name'
+            field: 'sub_project_name'
         },
-        companyAddress: { // 公司地址
+        trade: { // 所属行业
             type: DataTypes.STRING,
-            field: 'company_address'
+            field: 'trade'
         },
-        legalPerson: { // 公司法人
+        transferParty: { // 转让方
             type: DataTypes.STRING,
-            field: 'legal_person'
+            field: 'transfer_party'
         },
-        setupDate: { // 公司创建时间
-            type: DataTypes.DATE,
-            field: 'setup_date'
+        ownStock: { // 拥有的股权
+            type: DataTypes.STRING,
+            field: 'own_stock'
+        },
+        transferStock: { // 即将转让的股权
+            type: DataTypes.STRING,
+            field: 'transfer_stock'
+        },
+        parentGroup: { // 隶属集团
+            type: DataTypes.STRING,
+            field: 'parent_group'
         },
         clientName: { // 客户名称
             type: DataTypes.STRING,
@@ -76,13 +72,21 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             field: 'handle_person'
         },
-        ownStock: { // 拥有的股权
+        companyName: {  // 项目涉及公司名称
             type: DataTypes.STRING,
-            field: 'own_stock'
+            field: 'company_name'
         },
-        transferStock: { // 即将转让的股权
+        companyAddress: { // 公司地址
             type: DataTypes.STRING,
-            field: 'transfer_stock'
+            field: 'company_address'
+        },
+        legalPerson: { // 公司法人
+            type: DataTypes.STRING,
+            field: 'legal_person'
+        },
+        setupDate: { // 公司创建时间
+            type: DataTypes.DATE,
+            field: 'setup_date'
         },
         pagePath: { // 项目页面路径
             type: DataTypes.STRING,

@@ -1,4 +1,6 @@
 const Http = require('./axios');
+const Immutable = require('immutable');
+const { List, Map }  = Immutable;
 
 class Beijing extends Http {
     constructor() {
@@ -9,33 +11,58 @@ class Beijing extends Http {
         }
     }
 
-    async getCurrentDayList(params) {
-        const { $: $centerList } = await this.http.get(this.url.center);
-        const total = this._getTotal($centerList('.page_yqgp').eq(0));
-        if (!total) {
-            return [];
+    /**
+     * [getCurrentDayList 获取当日数据]
+     * @return {[type]}        [description]
+     */
+    async getCurrentDayList() {
+        try {
+            const { $: $centerList } = await this.http.get(this.url.center);
+            const total = this._getTotal($centerList('.page_yqgp').eq(0));
+            if (!total) {
+                return List();
+            }
+            const { $: $centerTotalList } = await this.http.get(this.url.center, {
+                curPage: 1,
+                numPerPage: total,
+            });
+            const detailPageList = this._getDataByTrList($centerTotalList('.plist_yqygp').find('tr'));
+            const prePublishData = await this.getDetailData(detailPageList);
+            return Immutable.fromJS(prePublishData);
+        } catch(err) {
+            console.log(err);
+            return List([]);
         }
-        const { $: $centerTotalList } = await this.http.get(this.url.center, {
-            curPage: 1,
-            numPerPage: total,
-        });
-        const detailPageList = this._getDataByTrList($centerTotalList('.plist_yqygp').find('tr'));
-        const prePublishData = await this.getDetailData(detailPageList);
-        return prePublishData; 
     }
-
+    /**
+     * [getDetailData 获取详情数据]
+     * @param  {[List]} pageList [详情页面列表]
+     * @return {[Promise]}       [Promise => List[Map, Map]]
+     */
     getDetailData(pageList) {
-        const arrPageList = Array.isArray(pageList) ? pageList : [pageList];
+        const arrPageList = List.isList(pageList) ? pageList : List([pageList]);
         const requestList = arrPageList.map((item) => {
-            return this.http.get(item.path).then((res) => {
-                const information = {};
-                return Object.assign(information, this._getInformation(res.$), {
-                    path: item.path,
-                    page: res.page,
+            return this.http.get(item.get('path')).then((res) => {
+                return this._getInformation(res.$).map((infomation) => {
+                    return Object.assign({}, infomation, {
+                        pagePath: item.get('path'),
+                        page: res.page,
+                        date: item.get('date'),
+                        name: item.get('name'),
+                    });
                 });
+                // const information = Map(this._getInformation(res.$))
+                //     .set('pagePath', item.get('path'))
+                //     .set('page', res.page)
+                //     .set('date', item.get('date'))
+                //     .set('name', item.get('name'));
+                // return information;
             });
         });
-        return Promise.all(requestList);
+        return Promise.all(requestList.toArray()).then((dataList) => {
+            const data = Array.prototype.concat.apply([], dataList);
+            return data;
+        });
     }
 
     /**
@@ -47,46 +74,59 @@ class Beijing extends Http {
         const numReg = /\d+/;
         const total = numReg.exec($div.text())[0] || 0;
 
-        return total
+        return total;
     }
 
     /**
      * _getDataByTrList 根据交易列表获得简要信息
      * @param $trList
-     * @returns Array [{
-     *      code,
-     *      name,
-     *      path,
-     *      date
-     *  }]
+     * @returns List [
+     *     Map {
+     *         code,
+     *         name,
+     *         path,
+     *         date,
+     *     }
+     * ]
      */
     _getDataByTrList($trList) {
-        const data = [];
+        let basedata = List();
         $trList.each((index, tr) => {
             if (index === 0)
                 return;
             const tdList = tr.children.filter(i => i.name === 'td');
-            const code = tdList[0].children[0].data;
-            const name = tdList[1].children[0].children[0].data;
-            const path = tdList[1].children[0].attribs.href;
-            const date = tdList[3].children[0].data;
-            data.push({code, name, path, date});
+            const baseinfo = Map({
+                code: tdList[0].children[0].data,
+                name: tdList[1].children[0].children[0].data,
+                path: tdList[1].children[0].attribs.href,
+                date: tdList[3].children[0].data,
+            });
+            basedata = basedata.push(baseinfo);
         });
-        return data;
+        return basedata;
     }
+    
     /**
      * [_getInformation 获取当前页面下的交易数据]
      * @param  {[Object]} $ [cherrio instance]
      * @return {[Array]}   [description]
      */
     _getInformation($) {
-        const information = {};
+        // const information = {};
         const commonInfo = this._getCommonInfo($('.xinxi').find('tr'));
         const exchangeInfo = this._getExchangeInfo($('.qingk').find('tr'));
-        Object.assign(information, commonInfo, exchangeInfo, {
-            exchange: '北交所',
+        const information = exchangeInfo.map((item) => {
+            return Object.assign({}, commonInfo, item, {
+                exchange: '北交所',
+                exchangeType: '预披露',
+                type: '央企',
+            });
         });
-        // console.log(information);
+        // Object.assign(information, commonInfo, exchangeInfo, {
+        //     exchange: '北交所',
+        //     exchangeType: '预披露',
+        //     type: '央企',
+        // });
         return information;
     }
 
@@ -97,6 +137,7 @@ class Beijing extends Http {
      */
     _getCommonInfo($tr) {
         const commonInfo = {};
+        commonInfo.projectName = $tr.eq(0).find('td').eq(1).text();
         commonInfo.code = $tr.eq(0).find('td').eq(3).text();
         commonInfo.startTime = $tr.eq(1).find('td').eq(1).text();
         commonInfo.endTime = $tr.eq(1).find('td').eq(3).text();
@@ -112,7 +153,6 @@ class Beijing extends Http {
      */
     /*** 需要优化 ***/
     _getExchangeInfo($tr) {
-        const exchangeInfo = {};
         const companyInfo = {};
         const transferPartyList = [];
 
@@ -140,12 +180,15 @@ class Beijing extends Http {
                 transferPartyList[transferPartyList.length - 1].transferStock = $tdList.eq(3).text();
             }
         });
-        transferPartyList.map(item => {
-            item.projectName = item.transferParty + item.transferStock;
+
+        const exchangeInfo = [];
+        transferPartyList.forEach(item => {
+            item.subProjectName = item.transferParty + item.transferStock;
+            exchangeInfo.push(Object.assign(item, companyInfo));
         });
-        Object.assign(exchangeInfo, companyInfo, {
-            transferPartyList,
-        });
+        // Object.assign(exchangeInfo, companyInfo, {
+        //     transferPartyList,
+        // });
         return exchangeInfo;
     }
 }

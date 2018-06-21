@@ -5,15 +5,20 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
-// const scheduleTask = require('./request/index');
-// const routes = require('./routes/index');
-// const users = require('./routes/users');
-
-// scheduleTask.start();
-
+/**
+ * [ScheduleTask]
+ * @type {[type]}
+ */
+const models = require('./models');
 const ScheduleTask = require('./exchange/index');
-const scheduleTask = new ScheduleTask();
-scheduleTask.start();
+models.sequelize.sync()
+    .then(() => {
+        const scheduleTask = new ScheduleTask();
+        scheduleTask.start();
+    })
+    .catch((err) => {
+        throw err;
+    });
 
 
 const app = express();
@@ -34,9 +39,9 @@ app.use('/', require('./router/index'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
 // error handlers
@@ -44,23 +49,23 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
+    app.use(function(err, req, res, next) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: err
+        });
     });
-  });
 }
 
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err.message,
+        error: {}
+    });
 });
 
 

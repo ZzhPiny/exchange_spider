@@ -10,15 +10,15 @@ module.exports = {
         dialect: 'mysql'
     },
     test: {
-        username: 'root',
-        password: '',
+        username: 'zhidesheng',
+        password: 'zhidesheng',
         database: 'zhidesheng',
-        host: 'localhost',
+        host: 'www.zhangzhonghao.com',
         dialect: 'mysql'
     },
     production: {
-        username: 'root',
-        password: '',
+        username: 'zhidesheng',
+        password: 'zhidesheng',
         database: 'zhidesheng',
         host: 'localhost',
         dialect: 'mysql'

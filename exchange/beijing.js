@@ -7,8 +7,8 @@ const models = require('../models');
 const Exchange = require('./exchange');
 
 class BeijingExchange extends Exchange {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
 
     async fetchPrePublishData() {
@@ -22,9 +22,10 @@ class BeijingExchange extends Exchange {
         // 为数据设置维护人员、部门
         const dataMaintainList = this.setMaintain(noExistData);
         // 保存数据
-        await this.saveData(noExistData);
+        this.saveData(dataMaintainList, 'PrePublish');
         // 保存页面
-        this.savePage(noExistData);
+        console.log(dataMaintainList);
+        this.savePage(dataMaintainList);
     }
 
     async fetchStocksData() {}
@@ -34,4 +35,4 @@ class BeijingExchange extends Exchange {
     async fetchMaterialObjData() {}
 }
 
-module.exports = new BeijingExchange();
+module.exports = BeijingExchange;
